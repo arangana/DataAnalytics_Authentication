@@ -1,0 +1,231 @@
+ <h1 class="page-header">Dashboard</h1>
+  
+<html>
+
+<head>
+<style>
+@btn-bg-color: #638F81;
+@btn-text-color: #fff;
+
+.btn1 {
+  border-bottom: solid 4px darken(@btn-bg-color,25%);
+  text-decoration: none;
+  &:hover {
+    background: lighten(@btn-bg-color,10%);
+  }
+  &.btn-arrow {
+    position: relative;
+    padding-right: 4em;
+    // overlay block
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      bottom: -4px;
+      width: 3em;
+      background: #fff;
+      opacity: 0.3;
+    }
+    // arrow
+    &:after {
+      @arrow-size: 0.4em;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0.85em;
+      right: 1.2em;
+      width: 0; 
+      height: 0; 
+      border-top: @arrow-size solid transparent;
+      border-bottom: @arrow-size solid transparent;
+      border-left: @arrow-size solid #fff;
+    }
+  }
+}
+
+.btn2 {
+  //font-size: 5em;
+  display: inline-block;
+  padding: 0.7em 1.5em;
+  margin-bottom: 1em;
+  border-radius: 0.4em;
+  text-shadow: 0 0.08em 0.08em #000;
+  border-width: 0.08em;
+  border-style: solid;
+  border-color: 
+    darken(@btn-bg-color,10%) 
+    darken(@btn-bg-color,10%) 
+    darken(@btn-bg-color,20%);
+  border-bottom-width: 0.2em;
+  box-shadow:
+     inset 0.08em .08em 0.14em rgba(255,255,255,.5), 
+     0.08em 0.14em 0.2em rgba(0,0,0,.3);
+  &:hover {
+    background: lighten(@btn-bg-color,10%);
+  }
+  &.btn-arrow {
+    position: relative;
+    padding-right: 3em;
+    //block
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 1.05em;
+      right: 1.47em;
+      width: 0.3em; 
+      height: 0.4em;
+      background: #fff;
+    }
+    // arrow
+    &:after {
+      @arrow-size: 0.5em;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0.8em;
+      right: 1em;
+      width: 0; 
+      height: 0; 
+      border-top: @arrow-size solid transparent;
+      border-bottom: @arrow-size solid transparent;
+      border-left: @arrow-size solid #fff;
+    }
+  }
+}
+
+
+.btn3 {
+  border: solid 1px #2F443D;
+  border-bottom: solid 2px #2F443D;
+  position: relative;
+  box-shadow: 0 3px 5px #777;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    background: #fff;
+    z-index: -1;
+    box-shadow: inset 0 3px 10px #ccc;
+    border: solid 1px #fff;
+  }
+}
+
+
+/* ------ btn4 ------ */
+.btn4 {
+  @btn4-color: #DB701F;
+  background: @btn4-color;
+  border: solid 7px #000;
+  padding: 20px;
+  box-shadow: inset 0 0 6px darken(@btn4-color,20%);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Tahoma", sans-serif;
+  text-shadow: 1px 1px 3px darken(@btn4-color,20%);
+  color: #fff;
+  position: relative;
+  width: 300px;
+  &:hover {
+    background: green;
+    &:before {
+      content: attr(data-hover);
+      display: block;
+      background: #000;
+      position: absolute;
+      top: 100%;
+      left: -7px;
+      right: -7px;
+      padding: 15px; 
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border: solid 10px transparent;
+      border-bottom-color: #000;
+      bottom: 0;
+      left: 50%;
+      margin-left: -10px;
+      z-index: 2;
+    }
+  }
+  
+}
+
+
+
+
+/* ------ framework ------ */
+
+body {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 20px;
+  font-family: "Tahoma", sans-serif;
+}
+
+a {
+  display: inline-block;
+  padding: 0.7em 1.5em;
+  margin-bottom: 1em;
+  color: @btn-text-color;
+  background: @btn-bg-color;
+  text-decoration: none;
+  &:active {
+    transform: scale(0.97);
+    -webkit-transform: scale(0.97);
+  }
+}
+hr {
+  border: none;
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #fff;
+  margin: 30px 0;
+}
+
+h1, h2 {
+  font-family: Georgia, serif;
+  color: #000;
+  text-shadow: 1px 1px 1px #fff;
+}
+h1 {
+  font-size: 60px;
+  margin: 0;
+}
+h2 { 
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 60px; 
+}
+p, p a {
+  color: #ddd;
+  text-shadow: 1px 1px 1px #fff;
+}
+</style>
+
+</head>
+
+<body>
+<h1> Hi! Good day in Ames isn't it?</h1>
+<h2> Thank you for choosing AmesHomes</h2>
+<h3> What would you like to do today?</h3>
+
+<hr>
+<a href="http://172.29.92.106:4000/buy.html" class="btn2">BUY</a><br>
+<a href="https://nagarjun.shinyapps.io/ameshomes/" class="btn2">SELL</a><br>
+<a href="https://docs.google.com/spreadsheets/d/12LGjNh7ev1_bHtdm2wZmmFUdpFeBUjeqYRhdWeKFO0I/edit#gid=0" class="btn2">Download Data</a>
+<hr>
+
+
+
+</body>
+</html>
